@@ -46,42 +46,31 @@ const allTypes = [
 
 const Types = () => {
 	return (
-		<div className="mt-10">
-			<div className="mb-20 flex items-center justify-center flex-wrap gap-x-5">
-				<div className="flex items-center gap-2 border bg-rose-200 text-orange-600 px-5 py-2 hover:bg-rose-100 duration-300 cursor-pointer font-bold rounded-3xl">
-					<Church />
-					<p>Discovery</p>
-				</div>
-				<div className="flex items-center gap-2 text-gray-600 font-semibold mt-3 md:mt-0">
-					<Utensils />
-					<p>Restaurants</p>
-				</div>
-				<div className="flex items-center gap-2 text-gray-600 font-semibold mt-3 md:mt-0">
-					<Store />
-					<p>Stores</p>
-				</div>
-			</div>
-			<div className="hidden lg:flex items-center justify-center gap-5">
-				{allTypes.map((item, index) => (
-					<div key={index}>
-						<div className="cursor-pointer">
-							<div className="bg-gray-200 w-full mx-auto rounded-md py-5 px-10 mb-3">
-								<Image
-									className="hover:scale-110 duration-300"
-									src={item.img}
-									alt={item.label}
-									width={50}
-									height={50}
-								/>
+		<>
+			<div className="mt-10">
+				{/* Types Grid */}
+				<div className="hidden lg:flex items-center justify-center gap-5">
+					{allTypes.map((item, index) => (
+						<div key={index}>
+							<div className="cursor-pointer">
+								<div className="bg-gray-200 w-full mx-auto rounded-md py-5 px-10 mb-3">
+									<Image
+										className="hover:scale-110 duration-300"
+										src={item.img}
+										alt={item.label}
+										width={50}
+										height={50}
+									/>
+								</div>
+								<p className="font-medium text-gray-600 text-sm text-center">
+									{item.label}
+								</p>
 							</div>
-							<p className="font-medium text-gray-600 text-sm text-center">
-								{item.label}
-							</p>
 						</div>
-					</div>
-				))}
+					))}
+				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 

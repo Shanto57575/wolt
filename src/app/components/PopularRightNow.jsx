@@ -105,16 +105,12 @@ const PopularRightNow = () => {
 				slidesPerView={1}
 				breakpoints={{
 					640: {
-						slidesPerView: 2,
+						slidesPerView: 3,
 						spaceBetween: 12,
 					},
 					768: {
-						slidesPerView: 3,
-						spaceBetween: 16,
-					},
-					1024: {
 						slidesPerView: 4,
-						spaceBetween: 20,
+						spaceBetween: 16,
 					},
 				}}
 				className="my-5"

@@ -11,7 +11,7 @@ const RectangleCard = ({ title, description, time, img, rating }) => {
 					sizes="(max-width: 640px) 280px, (max-width: 768px) 340px, (max-width: 1024px) 400px, 480px"
 					className="object-cover rounded-t-xl"
 				/>
-				<p className="absolute top-2 left-2 sm:top-4 sm:left-4 text-orange-600 bg-rose-200 rounded-full font-semibold px-2 py-1 sm:px-3 sm:py-1 text-xs sm:text-sm">
+				<p className="hidden md:block absolute top-2 left-2 sm:top-4 sm:left-4 text-orange-600 bg-rose-200 rounded-full font-semibold px-2 md:py-1 text-xs">
 					% 2000 KZT off your first order
 				</p>
 			</div>

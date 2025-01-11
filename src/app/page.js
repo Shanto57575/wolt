@@ -18,6 +18,7 @@ import QuickLinks from "./components/QuickLinks"
 import RestaurantsOnWolt from "./components/RestaurantsOnWolt"
 import Snacks from "./components/Snacks"
 import StoresOnWolt from "./components/StoresOnWolt"
+import Tabs from "./components/Tabs"
 import TopGroceryPicks from "./components/TopGroceryPicks"
 import TopRated from "./components/TopRated"
 import Types from "./components/Types"
@@ -26,6 +27,7 @@ import WalletFriendly from "./components/WalletFriendly"
 const Home = () => {
   return (
     <div>
+      <Tabs />
       <Types />
       <Banner />
       <Snacks />
