@@ -36,7 +36,6 @@ const Home = () => {
       <CartCategories />
       <ItemCombo />
       <NearOffers />
-
       <FastestDelivery />
       <WalletFriendly />
       <FoodLovers />
