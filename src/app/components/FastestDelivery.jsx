@@ -129,22 +129,12 @@ const FastestDelivery = () => {
 					forceToAxis: true,
 				}}
 				grabCursor={true}
-				spaceBetween={12}
-				slidesPerView={2}
-				breakpoints={{
-					640: {
-						slidesPerView: 3,
-						spaceBetween: 12,
-					},
-					768: {
-						slidesPerView: 4,
-						spaceBetween: 16,
-					},
-				}}
+				spaceBetween={16}
+				slidesPerView="auto"
 				className="my-5"
 			>
 				{deliveryItems.map((item, index) => (
-					<SwiperSlide key={index}>
+					<SwiperSlide key={index} className="!w-auto">
 						<RectangleCard
 							title={item.title}
 							description={item.description}

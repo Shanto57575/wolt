@@ -26,7 +26,7 @@ import WalletFriendly from "./components/WalletFriendly"
 
 const Home = () => {
   return (
-    <div>
+    <div className="mx-2">
       <Tabs />
       <Types />
       <Banner />

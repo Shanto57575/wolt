@@ -88,45 +88,53 @@ const Faq = () => {
 	];
 
 	return (
-		<div>
+		<div className="relative w-full">
 			<CommonHeader
 				header={"#FAQ"}
 				onPrevClick={handlePrevClick}
 				onNextClick={handleNextClick}
 			/>
-			<Swiper
-				onSwiper={(swiper) => {
-					swiperRef.current = swiper;
-				}}
-				modules={[FreeMode, Mousewheel]}
-				freeMode={{
-					enabled: true,
-					sticky: true,
-				}}
-				mousewheel={{
-					forceToAxis: true,
-				}}
-				grabCursor={true}
-				spaceBetween={12}
-				slidesPerView={2}
-				breakpoints={{
-					640: {
-						slidesPerView: 3,
-						spaceBetween: 12,
-					},
-				}}
-				className="my-5"
-			>
-				{faqItems.map((item, index) => (
-					<SwiperSlide key={index}>
-						<SpecialCard
-							img={item.img}
-							title={item.title}
-							description={item.description}
-						/>
-					</SwiperSlide>
-				))}
-			</Swiper>
+			<div className="overflow-hidden">
+				<Swiper
+					onSwiper={(swiper) => {
+						swiperRef.current = swiper;
+					}}
+					modules={[FreeMode, Mousewheel]}
+					freeMode={{
+						enabled: true,
+						sticky: true,
+						momentumRatio: 0.25,
+						momentumBounce: false,
+					}}
+					mousewheel={{
+						forceToAxis: true,
+					}}
+					grabCursor={true}
+					spaceBetween={16}
+					slidesPerView="auto"
+					className="my-5"
+					style={{
+						paddingRight: "16px",
+						marginRight: "-16px",
+					}}
+				>
+					{faqItems.map((item, index) => (
+						<SwiperSlide
+							key={index}
+							className="!w-[380px] flex-shrink-0"
+							style={{
+								marginRight: "16px",
+							}}
+						>
+							<SpecialCard
+								img={item.img}
+								title={item.title}
+								description={item.description}
+							/>
+						</SwiperSlide>
+					))}
+				</Swiper>
+			</div>
 		</div>
 	);
 };

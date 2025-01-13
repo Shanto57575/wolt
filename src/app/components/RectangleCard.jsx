@@ -3,16 +3,19 @@ import Image from "next/image";
 const RectangleCard = ({ title, description, time, img, rating }) => {
 	return (
 		<div className="border rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 w-full max-w-[280px] sm:max-w-[340px] md:max-w-[400px] lg:max-w-[480px] mx-auto mb-4 sm:mb-6">
-			<div className="relative w-full pt-[56.25%]">
+			<div className="relative w-full">
 				<Image
 					src={img}
 					alt={title}
-					fill
+					width={300}
+					height={160}
 					sizes="(max-width: 640px) 280px, (max-width: 768px) 340px, (max-width: 1024px) 400px, 480px"
 					className="object-cover rounded-t-xl"
 				/>
+
 				<p className="hidden md:block absolute top-2 left-2 sm:top-4 sm:left-4 text-orange-600 bg-rose-200 rounded-full font-semibold px-2 md:py-1 text-xs">
-					% 2000 KZT off your first order
+					% 14 days of <span className="font-serif italic">E</span>0 delivery
+					fees
 				</p>
 			</div>
 			<div className="border-b border-dashed p-3 sm:p-4">
@@ -25,7 +28,7 @@ const RectangleCard = ({ title, description, time, img, rating }) => {
 							{description}
 						</p>
 					</div>
-					<div className="bg-rose-200 text-orange-600 px-2 py-1 sm:px-3 sm:py-1 rounded-md text-center flex-shrink-0">
+					<div className="hidden lg:block bg-rose-200 text-orange-600 px-2 py-1 sm:px-3 sm:py-1 rounded-md text-center flex-shrink-0">
 						<p className="font-semibold text-sm sm:text-base">{time}</p>
 						<span className="text-xs">min</span>
 					</div>
@@ -33,14 +36,16 @@ const RectangleCard = ({ title, description, time, img, rating }) => {
 			</div>
 			<div className="flex items-center justify-between px-3 py-2 sm:px-4 sm:py-2">
 				<div className="flex items-center gap-1 sm:gap-2">
-					<p className="text-orange-600 font-semibold text-sm sm:text-base">
+					<p className="italic font-serif bg-rose-200 rounded-full px-0.5 text-orange-600 font-semibold text-sm sm:text-base">
 						w+
 					</p>
-					<p className="text-orange-600 font-semibold text-sm sm:text-base">
-						KZT 0
+					<p className="text-orange-600 text-sm sm:text-base">
+						<span className="font-serif italic">E</span>
+						<span className="font-sans">0.00 .</span>
+						<span className="md:hidden"> {time} min</span>
 					</p>
 				</div>
-				<p className="text-gray-600 text-xs sm:text-sm">
+				<p className="hidden md:block text-gray-600 text-xs sm:text-sm">
 					<span role="img" aria-label="Smiling face">
 						🙂
 					</span>{" "}
